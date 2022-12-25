@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.NetworkInformation;
 
 namespace System_Resource_Monitor
 {
@@ -36,10 +38,5 @@ namespace System_Resource_Monitor
             metroLabelDate.Text = DateTime.Now.ToLongDateString();
         }
 
-        /*private void metroLabelTime_Click(object sender, EventArgs e)
-        {
-            metroLabelTime.Text = DateTime.Now.ToLongTimeString();
-            metroLabelDate.Text = DateTime.Now.ToShortDateString();
-        }*/
     }
 }
