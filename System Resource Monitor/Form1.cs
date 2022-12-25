@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +32,14 @@ namespace System_Resource_Monitor
         private void Form1_Load(object sender, EventArgs e)
         {
             timer.Start();
+            metroLabelTime.Text = DateTime.Now.ToLongTimeString();
+            metroLabelDate.Text = DateTime.Now.ToLongDateString();
         }
+
+        /*private void metroLabelTime_Click(object sender, EventArgs e)
+        {
+            metroLabelTime.Text = DateTime.Now.ToLongTimeString();
+            metroLabelDate.Text = DateTime.Now.ToShortDateString();
+        }*/
     }
 }

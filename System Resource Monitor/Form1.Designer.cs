@@ -38,6 +38,8 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.lblCPU = new MetroFramework.Controls.MetroLabel();
             this.lblRAM = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelTime = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelDate = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pRAM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).BeginInit();
             this.SuspendLayout();
@@ -108,11 +110,31 @@
             this.lblRAM.TabIndex = 5;
             this.lblRAM.Text = "0 %";
             // 
+            // metroLabelTime
+            // 
+            this.metroLabelTime.AutoSize = true;
+            this.metroLabelTime.Location = new System.Drawing.Point(485, 194);
+            this.metroLabelTime.Name = "metroLabelTime";
+            this.metroLabelTime.Size = new System.Drawing.Size(40, 20);
+            this.metroLabelTime.TabIndex = 6;
+            this.metroLabelTime.Text = "Time";
+            // 
+            // metroLabelDate
+            // 
+            this.metroLabelDate.AutoSize = true;
+            this.metroLabelDate.Location = new System.Drawing.Point(30, 194);
+            this.metroLabelDate.Name = "metroLabelDate";
+            this.metroLabelDate.Size = new System.Drawing.Size(38, 20);
+            this.metroLabelDate.TabIndex = 7;
+            this.metroLabelDate.Text = "Date";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 197);
+            this.ClientSize = new System.Drawing.Size(611, 253);
+            this.Controls.Add(this.metroLabelDate);
+            this.Controls.Add(this.metroLabelTime);
             this.Controls.Add(this.lblRAM);
             this.Controls.Add(this.lblCPU);
             this.Controls.Add(this.metroProgressBarRAM);
@@ -142,6 +164,8 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel lblCPU;
         private MetroFramework.Controls.MetroLabel lblRAM;
+        private MetroFramework.Controls.MetroLabel metroLabelTime;
+        private MetroFramework.Controls.MetroLabel metroLabelDate;
     }
 }
 
