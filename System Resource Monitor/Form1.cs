@@ -28,7 +28,8 @@ namespace System_Resource_Monitor
             metroProgressBarRAM.Value = (int)fram;
             lblCPU.Text = string.Format("{0:0.00}%", fcpu);
             lblRAM.Text = string.Format("{0:0.00}%", fram);
-
+            chart1.Series["CPU"].Points.AddY(fcpu);
+            chart1.Series["RAM"].Points.AddY(fram);
         }
 
         private void Form1_Load(object sender, EventArgs e)

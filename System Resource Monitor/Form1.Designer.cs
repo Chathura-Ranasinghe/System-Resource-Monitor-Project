@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pRAM = new System.Diagnostics.PerformanceCounter();
             this.pCPU = new System.Diagnostics.PerformanceCounter();
             this.timer = new System.Windows.Forms.Timer(this.components);
@@ -40,8 +44,10 @@
             this.lblRAM = new MetroFramework.Controls.MetroLabel();
             this.metroLabelTime = new MetroFramework.Controls.MetroLabel();
             this.metroLabelDate = new MetroFramework.Controls.MetroLabel();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.pRAM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // pRAM
@@ -113,7 +119,7 @@
             // metroLabelTime
             // 
             this.metroLabelTime.AutoSize = true;
-            this.metroLabelTime.Location = new System.Drawing.Point(485, 194);
+            this.metroLabelTime.Location = new System.Drawing.Point(485, 514);
             this.metroLabelTime.Name = "metroLabelTime";
             this.metroLabelTime.Size = new System.Drawing.Size(40, 20);
             this.metroLabelTime.TabIndex = 6;
@@ -122,17 +128,39 @@
             // metroLabelDate
             // 
             this.metroLabelDate.AutoSize = true;
-            this.metroLabelDate.Location = new System.Drawing.Point(30, 194);
+            this.metroLabelDate.Location = new System.Drawing.Point(30, 514);
             this.metroLabelDate.Name = "metroLabelDate";
             this.metroLabelDate.Size = new System.Drawing.Size(38, 20);
             this.metroLabelDate.TabIndex = 7;
             this.metroLabelDate.Text = "Date";
             // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(31, 189);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "CPU";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "RAM";
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(533, 300);
+            this.chart1.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 240);
+            this.ClientSize = new System.Drawing.Size(611, 556);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.metroLabelDate);
             this.Controls.Add(this.metroLabelTime);
             this.Controls.Add(this.lblRAM);
@@ -148,6 +176,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pRAM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,6 +195,7 @@
         private MetroFramework.Controls.MetroLabel lblRAM;
         private MetroFramework.Controls.MetroLabel metroLabelTime;
         private MetroFramework.Controls.MetroLabel metroLabelDate;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 
