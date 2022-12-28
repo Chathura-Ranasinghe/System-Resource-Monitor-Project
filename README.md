@@ -33,4 +33,4 @@ Is there any problem with the program, contact me : chathurar.99.bc@gmail.com
 
 ## License
 
-This project is licensed under the [GNU General Public License v3.0] License - see the LICENSE.md file for details
+This project is licensed under the [GNU Affero General Public License v3.0] License - see the LICENSE.md file for details
