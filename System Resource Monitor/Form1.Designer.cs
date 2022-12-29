@@ -48,16 +48,16 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblcont = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.intcont = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblcont = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel5 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pRAM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -240,30 +240,6 @@
             this.panel2.TabIndex = 10;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 16);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "  Network Status";
-            // 
-            // lblcont
-            // 
-            this.lblcont.AutoSize = true;
-            this.lblcont.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblcont.Location = new System.Drawing.Point(0, 84);
-            this.lblcont.Name = "lblcont";
-            this.lblcont.Size = new System.Drawing.Size(50, 16);
-            this.lblcont.TabIndex = 15;
-            this.lblcont.Text = "Internet\r\n";
-            this.lblcont.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblcont.Click += new System.EventHandler(this.lblcont_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::System_Resource_Monitor.Properties.Resources.png2;
@@ -304,6 +280,39 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.lblcont);
+            this.panel5.Location = new System.Drawing.Point(0, 384);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(150, 100);
+            this.panel5.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 16);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "  Network Status";
+            // 
+            // lblcont
+            // 
+            this.lblcont.AutoSize = true;
+            this.lblcont.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblcont.Location = new System.Drawing.Point(0, 84);
+            this.lblcont.Name = "lblcont";
+            this.lblcont.Size = new System.Drawing.Size(50, 16);
+            this.lblcont.TabIndex = 15;
+            this.lblcont.Text = "Internet\r\n";
+            this.lblcont.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblcont.Click += new System.EventHandler(this.lblcont_Click);
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -321,15 +330,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Controls.Add(this.lblcont);
-            this.panel5.Location = new System.Drawing.Point(0, 384);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(150, 100);
-            this.panel5.TabIndex = 16;
             // 
             // Form1
             // 
