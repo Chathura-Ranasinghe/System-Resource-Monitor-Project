@@ -19,6 +19,29 @@ namespace System_Resource_Monitor
         {
             InitializeComponent();
         }
+        public bool pingStatus()
+        {
+            bool pingStatus = false;
+            string hostNameOrAddress = "Google.com";
+
+            using (Ping p = new Ping())
+            {
+                string data = "aaaaaaaaaaaaaaa";
+                byte[] buffer = Encoding.ASCII.GetBytes(data);
+                int timeout = 1000;
+
+                try
+                {
+                    PingReply reply = p.Send(hostNameOrAddress, timeout, buffer);
+                    pingStatus = (reply.Status == IPStatus.Success);
+                }
+                catch(Exception)
+                { 
+                    pingStatus= false;
+                }
+                return pingStatus;
+            }
+        }
 
         private void timer_Tick(object sender, EventArgs e)
         {
@@ -55,6 +78,27 @@ namespace System_Resource_Monitor
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (pingStatus() == true)
+            {
+                intcont.Image = Properties.Resources.connect;
+                lblcont.Text = "        Connected";
+                lblcont.ForeColor = Color.FromArgb(33, 230, 197);
+            }
+            else
+            {
+                intcont.Image = Properties.Resources.diconnect;
+                lblcont.Text = "     Not Connected";
+                lblcont.ForeColor = Color.FromArgb(240,89,69);
+            }
+        }
+
+        private void lblcont_Click(object sender, EventArgs e)
         {
 
         }
