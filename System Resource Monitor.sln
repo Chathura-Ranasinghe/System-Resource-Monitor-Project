@@ -11,6 +11,7 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Description = .NET Framework, System Recource Monitor Application is created by me using visual studio. This application show the CPU & Memory Usage with Graphical interface, and also Date & Time.
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{ADC4C66D-CEA7-4AB1-A167-D73A977F350F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
