@@ -52,7 +52,7 @@ namespace System_Resource_Monitor
             lblCPU.Text = string.Format("{0:0.00}%", fcpu);
             lblRAM.Text = string.Format("{0:0.00}%", fram);
             chart1.Series["CPU"].Points.AddY(fcpu);
-            chart1.Series["RAM"].Points.AddY(fram);
+            chart2.Series["Memory"].Points.AddY(fram);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -99,6 +99,16 @@ namespace System_Resource_Monitor
         }
 
         private void lblcont_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
