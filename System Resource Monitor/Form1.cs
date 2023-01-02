@@ -14,6 +14,7 @@ using System.Diagnostics;
 using System.Management;
 
 namespace System_Resource_Monitor
+
 {
     public partial class Form1 : MetroFramework.Forms.MetroForm
     {
@@ -133,6 +134,11 @@ namespace System_Resource_Monitor
             SysUpTime.Text = (int)perfSYS.NextValue()/60 + " min.";
 
             CountLCPU.Text = Environment.ProcessorCount.ToString();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://chatdil0.github.io/about-me/index.html");
         }
     }
 }
