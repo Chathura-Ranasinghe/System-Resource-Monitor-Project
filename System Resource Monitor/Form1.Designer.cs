@@ -47,42 +47,60 @@
             this.metroLabelDate = new MetroFramework.Controls.MetroLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.intcont = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblcont = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.intcont = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.SysUpTime = new System.Windows.Forms.Label();
+            this.AvMemo = new System.Windows.Forms.Label();
+            this.CPUUsage = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.CountPCPU = new System.Windows.Forms.Label();
+            this.CountLCPU = new System.Windows.Forms.Label();
+            this.CountCores = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pRAM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).BeginInit();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.intcont)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.intcont)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // pRAM
@@ -121,11 +139,12 @@
             // 
             this.lblCPU.AutoSize = true;
             this.lblCPU.BackColor = System.Drawing.Color.AliceBlue;
+            this.lblCPU.FontSize = MetroFramework.MetroLabelSize.Small;
             this.lblCPU.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.lblCPU.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.lblCPU.Location = new System.Drawing.Point(267, 245);
             this.lblCPU.Name = "lblCPU";
-            this.lblCPU.Size = new System.Drawing.Size(35, 20);
+            this.lblCPU.Size = new System.Drawing.Size(30, 17);
             this.lblCPU.TabIndex = 4;
             this.lblCPU.Text = "0 %";
             this.lblCPU.UseCustomBackColor = true;
@@ -135,11 +154,12 @@
             // 
             this.lblRAM.AutoSize = true;
             this.lblRAM.BackColor = System.Drawing.Color.AliceBlue;
+            this.lblRAM.FontSize = MetroFramework.MetroLabelSize.Small;
             this.lblRAM.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.lblRAM.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.lblRAM.Location = new System.Drawing.Point(267, 245);
             this.lblRAM.Name = "lblRAM";
-            this.lblRAM.Size = new System.Drawing.Size(35, 20);
+            this.lblRAM.Size = new System.Drawing.Size(30, 17);
             this.lblRAM.TabIndex = 5;
             this.lblRAM.Text = "0 %";
             this.lblRAM.UseCustomBackColor = true;
@@ -147,50 +167,47 @@
             // 
             // metroLabelTime
             // 
-            this.metroLabelTime.AutoSize = true;
+            this.metroLabelTime.Dock = System.Windows.Forms.DockStyle.Top;
             this.metroLabelTime.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabelTime.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabelTime.ForeColor = System.Drawing.Color.White;
-            this.metroLabelTime.Location = new System.Drawing.Point(668, 22);
+            this.metroLabelTime.Location = new System.Drawing.Point(0, 0);
             this.metroLabelTime.Name = "metroLabelTime";
-            this.metroLabelTime.Size = new System.Drawing.Size(39, 17);
+            this.metroLabelTime.Size = new System.Drawing.Size(150, 17);
             this.metroLabelTime.TabIndex = 6;
             this.metroLabelTime.Text = "Time";
+            this.metroLabelTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroLabelTime.UseCustomBackColor = true;
             this.metroLabelTime.UseCustomForeColor = true;
-            this.metroLabelTime.Click += new System.EventHandler(this.metroLabelTime_Click);
             // 
             // metroLabelDate
             // 
-            this.metroLabelDate.AutoSize = true;
+            this.metroLabelDate.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.metroLabelDate.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabelDate.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabelDate.ForeColor = System.Drawing.Color.White;
-            this.metroLabelDate.Location = new System.Drawing.Point(33, 20);
+            this.metroLabelDate.Location = new System.Drawing.Point(0, 28);
             this.metroLabelDate.Name = "metroLabelDate";
-            this.metroLabelDate.Size = new System.Drawing.Size(37, 17);
+            this.metroLabelDate.Size = new System.Drawing.Size(150, 17);
             this.metroLabelDate.TabIndex = 7;
             this.metroLabelDate.Text = "Date";
+            this.metroLabelDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroLabelDate.UseCustomBackColor = true;
             this.metroLabelDate.UseCustomForeColor = true;
-            this.metroLabelDate.Click += new System.EventHandler(this.metroLabelDate_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.panel1.Controls.Add(this.metroLabelDate);
-            this.panel1.Controls.Add(this.metroLabelTime);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 540);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 60);
             this.panel1.TabIndex = 9;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panel2.Controls.Add(this.intcont);
+            this.panel2.Controls.Add(this.panel12);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -198,7 +215,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(150, 510);
             this.panel2.TabIndex = 10;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // intcont
+            // 
+            this.intcont.Image = ((System.Drawing.Image)(resources.GetObject("intcont.Image")));
+            this.intcont.Location = new System.Drawing.Point(0, 28);
+            this.intcont.Name = "intcont";
+            this.intcont.Size = new System.Drawing.Size(150, 32);
+            this.intcont.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.intcont.TabIndex = 13;
+            this.intcont.TabStop = false;
             // 
             // panel3
             // 
@@ -209,38 +235,49 @@
             this.panel3.Size = new System.Drawing.Size(150, 80);
             this.panel3.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::System_Resource_Monitor.Properties.Resources.pngwing_com;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.intcont);
             this.panel5.Controls.Add(this.lblcont);
-            this.panel5.Location = new System.Drawing.Point(0, 120);
+            this.panel5.Location = new System.Drawing.Point(0, 405);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(150, 100);
+            this.panel5.Size = new System.Drawing.Size(150, 86);
             this.panel5.TabIndex = 16;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 16);
+            this.label1.Size = new System.Drawing.Size(150, 16);
             this.label1.TabIndex = 12;
-            this.label1.Text = "  Network Status";
+            this.label1.Text = "Network Status";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblcont
             // 
-            this.lblcont.AutoSize = true;
             this.lblcont.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblcont.Location = new System.Drawing.Point(0, 84);
+            this.lblcont.Location = new System.Drawing.Point(0, 57);
             this.lblcont.Name = "lblcont";
-            this.lblcont.Size = new System.Drawing.Size(50, 16);
+            this.lblcont.Size = new System.Drawing.Size(150, 29);
             this.lblcont.TabIndex = 15;
             this.lblcont.Text = "Internet\r\n";
-            this.lblcont.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblcont.Click += new System.EventHandler(this.lblcont_Click);
+            this.lblcont.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // panel4
             // 
@@ -250,6 +287,17 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(650, 80);
             this.panel4.TabIndex = 11;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::System_Resource_Monitor.Properties.Resources.srm;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(650, 80);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // guna2Elipse1
             // 
@@ -269,6 +317,18 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(325, 40);
             this.panel6.TabIndex = 12;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox3.Image = global::System_Resource_Monitor.Properties.Resources.cpu1;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(325, 40);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
             // panel7
             // 
@@ -291,52 +351,6 @@
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.Image = global::System_Resource_Monitor.Properties.Resources.cpu1;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(325, 40);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // intcont
-            // 
-            this.intcont.Image = ((System.Drawing.Image)(resources.GetObject("intcont.Image")));
-            this.intcont.Location = new System.Drawing.Point(22, 147);
-            this.intcont.Name = "intcont";
-            this.intcont.Size = new System.Drawing.Size(100, 50);
-            this.intcont.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.intcont.TabIndex = 13;
-            this.intcont.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::System_Resource_Monitor.Properties.Resources.pngwing_com;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 80);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::System_Resource_Monitor.Properties.Resources.srm;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(650, 80);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.LightGray;
@@ -347,17 +361,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(325, 265);
             this.panel8.TabIndex = 14;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel9.Controls.Add(this.chart2);
-            this.panel9.Controls.Add(this.metroProgressBarRAM);
-            this.panel9.Controls.Add(this.lblRAM);
-            this.panel9.Location = new System.Drawing.Point(475, 150);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(325, 265);
-            this.panel9.TabIndex = 15;
             // 
             // chart1
             // 
@@ -380,6 +383,17 @@
             this.chart1.Size = new System.Drawing.Size(325, 240);
             this.chart1.TabIndex = 5;
             // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel9.Controls.Add(this.chart2);
+            this.panel9.Controls.Add(this.metroProgressBarRAM);
+            this.panel9.Controls.Add(this.lblRAM);
+            this.panel9.Location = new System.Drawing.Point(475, 150);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(325, 265);
+            this.panel9.TabIndex = 15;
+            // 
             // chart2
             // 
             this.chart2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -399,12 +413,189 @@
             this.chart2.Size = new System.Drawing.Size(325, 240);
             this.chart2.TabIndex = 6;
             // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel10.Controls.Add(this.label2);
+            this.panel10.Controls.Add(this.label3);
+            this.panel10.Controls.Add(this.label4);
+            this.panel10.Controls.Add(this.SysUpTime);
+            this.panel10.Controls.Add(this.AvMemo);
+            this.panel10.Controls.Add(this.CPUUsage);
+            this.panel10.Location = new System.Drawing.Point(150, 415);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(325, 125);
+            this.panel10.TabIndex = 16;
+            // 
+            // SysUpTime
+            // 
+            this.SysUpTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SysUpTime.ForeColor = System.Drawing.Color.White;
+            this.SysUpTime.Location = new System.Drawing.Point(200, 90);
+            this.SysUpTime.Name = "SysUpTime";
+            this.SysUpTime.Size = new System.Drawing.Size(100, 16);
+            this.SysUpTime.TabIndex = 2;
+            this.SysUpTime.Text = "#";
+            this.SysUpTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // AvMemo
+            // 
+            this.AvMemo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AvMemo.ForeColor = System.Drawing.Color.White;
+            this.AvMemo.Location = new System.Drawing.Point(200, 55);
+            this.AvMemo.Name = "AvMemo";
+            this.AvMemo.Size = new System.Drawing.Size(100, 16);
+            this.AvMemo.TabIndex = 1;
+            this.AvMemo.Text = "#";
+            this.AvMemo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // CPUUsage
+            // 
+            this.CPUUsage.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPUUsage.ForeColor = System.Drawing.Color.White;
+            this.CPUUsage.Location = new System.Drawing.Point(200, 20);
+            this.CPUUsage.Name = "CPUUsage";
+            this.CPUUsage.Size = new System.Drawing.Size(100, 16);
+            this.CPUUsage.TabIndex = 0;
+            this.CPUUsage.Text = "#";
+            this.CPUUsage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panel11.Controls.Add(this.label5);
+            this.panel11.Controls.Add(this.label6);
+            this.panel11.Controls.Add(this.label7);
+            this.panel11.Controls.Add(this.CountPCPU);
+            this.panel11.Controls.Add(this.CountLCPU);
+            this.panel11.Controls.Add(this.CountCores);
+            this.panel11.Location = new System.Drawing.Point(475, 415);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(325, 125);
+            this.panel11.TabIndex = 17;
+            // 
+            // CountPCPU
+            // 
+            this.CountPCPU.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CountPCPU.ForeColor = System.Drawing.Color.White;
+            this.CountPCPU.Location = new System.Drawing.Point(200, 90);
+            this.CountPCPU.Name = "CountPCPU";
+            this.CountPCPU.Size = new System.Drawing.Size(100, 16);
+            this.CountPCPU.TabIndex = 5;
+            this.CountPCPU.Text = "#";
+            this.CountPCPU.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // CountLCPU
+            // 
+            this.CountLCPU.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CountLCPU.ForeColor = System.Drawing.Color.White;
+            this.CountLCPU.Location = new System.Drawing.Point(200, 55);
+            this.CountLCPU.Name = "CountLCPU";
+            this.CountLCPU.Size = new System.Drawing.Size(100, 16);
+            this.CountLCPU.TabIndex = 4;
+            this.CountLCPU.Text = "#";
+            this.CountLCPU.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // CountCores
+            // 
+            this.CountCores.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CountCores.ForeColor = System.Drawing.Color.White;
+            this.CountCores.Location = new System.Drawing.Point(200, 20);
+            this.CountCores.Name = "CountCores";
+            this.CountCores.Size = new System.Drawing.Size(100, 16);
+            this.CountCores.TabIndex = 3;
+            this.CountCores.Text = "#";
+            this.CountCores.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 450;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(20, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 16);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "System Up Time";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(20, 55);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(132, 16);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Available Memory";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(20, 20);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 16);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "CPU Usage";
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.metroLabelDate);
+            this.panel12.Controls.Add(this.metroLabelTime);
+            this.panel12.Location = new System.Drawing.Point(3, 120);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(150, 45);
+            this.panel12.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(20, 90);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(167, 16);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Count Of Phisical CPUs";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(20, 55);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(163, 16);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Count Of Logical CPUs";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(20, 20);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 16);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Count Of Cores";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackLocation = MetroFramework.Forms.BackLocation.TopRight;
             this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.panel11);
+            this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);
@@ -423,26 +614,28 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pRAM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.intcont)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.intcont)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel12.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -478,6 +671,22 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label SysUpTime;
+        private System.Windows.Forms.Label AvMemo;
+        private System.Windows.Forms.Label CPUUsage;
+        private System.Windows.Forms.Label CountPCPU;
+        private System.Windows.Forms.Label CountLCPU;
+        private System.Windows.Forms.Label CountCores;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
 

@@ -10,15 +10,49 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.NetworkInformation;
+using System.Diagnostics;
+using System.Management;
 
 namespace System_Resource_Monitor
 {
     public partial class Form1 : MetroFramework.Forms.MetroForm
     {
+
+        PerformanceCounter perfCPU = new PerformanceCounter("Processor","% Processor Time","_Total");
+        PerformanceCounter perfRAM = new PerformanceCounter("Memory","Available MBytes");
+        PerformanceCounter perfSYS = new PerformanceCounter("System","System Up Time");
+
         public Form1()
         {
             InitializeComponent();
         }
+
+        private int CountOfPhysCores()
+        {
+            ManagementClass mc = new ManagementClass("Win32_Processor");
+            ManagementObjectCollection moc = mc.GetInstances();
+            string socketDesign = string .Empty;
+            List<string> physCPU = new List<string>();
+
+            if (!physCPU.Contains(socketDesign)) 
+            { 
+                physCPU.Add(socketDesign);
+            }
+
+            return physCPU.Count;
+        }
+
+        private int CountOfLogicalCores()
+        {
+            int logCPU = 0;
+            ManagementClass mc = new ManagementClass("Win32_Processor");
+            ManagementObjectCollection moc = mc.GetInstances();
+
+            logCPU++;
+
+            return logCPU;
+        }
+
         public bool pingStatus()
         {
             bool pingStatus = false;
@@ -58,27 +92,21 @@ namespace System_Resource_Monitor
         private void Form1_Load(object sender, EventArgs e)
         {
             timer.Start();
-            metroLabelTime.Text = DateTime.Now.ToLongTimeString();
-            metroLabelDate.Text = DateTime.Now.ToLongDateString();
-        }
+            timer1.Start();
+            metroLabelTime.Text = DateTime.Now.ToShortTimeString();
+            metroLabelDate.Text = DateTime.Now.ToShortDateString();
 
-        private void metroLabelDate_Click(object sender, EventArgs e)
-        {
+            foreach(var item in new System.Management.ManagementObjectSearcher("Select * from Win32_ComputerSystem").Get())
+            {
+                CountPCPU.Text = item["NumberOfProcessors"]+"";
+            }
+            int coreCount = 0;
+            foreach(var item in new System.Management.ManagementObjectSearcher("Select * from Win32_Processor").Get())
+            {
+                coreCount += int.Parse(item["NumberOfCores"].ToString());
+            }
 
-        }
-
-        private void metroLabelTime_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
+            CountCores.Text = coreCount.ToString();
 
         }
 
@@ -87,30 +115,24 @@ namespace System_Resource_Monitor
             if (pingStatus() == true)
             {
                 intcont.Image = Properties.Resources.connect;
-                lblcont.Text = "        Connected";
+                lblcont.Text = "Connected";
                 lblcont.ForeColor = Color.FromArgb(33, 230, 197);
             }
             else
             {
                 intcont.Image = Properties.Resources.diconnect;
-                lblcont.Text = "     Not Connected";
+                lblcont.Text = "Not Connected";
                 lblcont.ForeColor = Color.FromArgb(240,89,69);
             }
         }
 
-        private void lblcont_Click(object sender, EventArgs e)
+        private void timer2_Tick(object sender, EventArgs e)
         {
+            CPUUsage.Text = (int)perfCPU.NextValue() + " %";
+            AvMemo.Text = (int)perfRAM.NextValue() + "";
+            SysUpTime.Text = (int)perfSYS.NextValue()/60 + " min.";
 
-        }
-
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+            CountLCPU.Text = Environment.ProcessorCount.ToString();
         }
     }
 }
