@@ -2,6 +2,8 @@
 
 System Recource Monitor Application
 
+![alt text](Photos/runing.PNG)
+
 ## Description
 
 .NET Framework, System Recource Monitor Application is created by me using visual studio. This application show the CPU & Memory Usage with Graphical interface, and also Date & Time.
