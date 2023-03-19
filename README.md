@@ -6,7 +6,7 @@ System Recource Monitor Application
 
 ## Description
 
-.NET Framework, System Recourse Monitor Application is created by me using visual studio. This application shows the CPU & Memory Usage, Network connectivity, Available Memory, System Up Time, Count of Cores (Logical & Physical) and Date & Time with attractive Graphical interface.
+.NET Framework, System Recourse Monitor Application is created by Group of Us using visual studio. This application shows the CPU & Memory Usage, Network connectivity, Available Memory, System Up Time, Count of Cores (Logical & Physical) and Date & Time with attractive Graphical interface.
 
 ## Getting Started
 
@@ -21,12 +21,13 @@ System Recource Monitor Application
 
 ## Help
 
-Is there any problem with the program, contact me : chathurar.99.bc@gmail.com
+Is there any problem with the program, contact us;
 
 ## Authors
 
 * Chathura Ranasinghe
-* (+94) 76 183 1436
+* Malith Keerthisinghe
+* Thilina Lakshan
 
 ## Version History
 

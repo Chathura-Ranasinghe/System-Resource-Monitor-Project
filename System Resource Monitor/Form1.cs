@@ -1,4 +1,4 @@
-﻿using MetroFramework;
+using MetroFramework;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -138,7 +138,12 @@ namespace System_Resource_Monitor
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://chatdil0.github.io/about-me/index.html");
+            
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
