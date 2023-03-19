@@ -21,7 +21,7 @@ System Recource Monitor Application
 
 ## Help
 
-Is there any problem with the program, contact me : chathurar.99.bc@gmail.com
+Is there any problem with the program, contact us;
 
 ## Authors
 
