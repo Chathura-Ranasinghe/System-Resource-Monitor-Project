@@ -1,6 +1,6 @@
 # System Resource Monitor
 
-![alt text](Photos/runing.PNG)
+![alt text](Photos/runtime.PNG)
 
 ## Description
 
