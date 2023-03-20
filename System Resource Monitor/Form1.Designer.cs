@@ -30,12 +30,12 @@ namespace System_Resource_Monitor
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea41 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend41 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series41 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea42 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend42 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series42 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pRAM = new System.Diagnostics.PerformanceCounter();
             this.pCPU = new System.Diagnostics.PerformanceCounter();
             this.timer = new System.Windows.Forms.Timer(this.components);
@@ -83,6 +83,12 @@ namespace System_Resource_Monitor
             this.CountLCPU = new System.Windows.Forms.Label();
             this.CountCores = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.CircleProgressBar = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.metroLabelBattery = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelPLugged = new MetroFramework.Controls.MetroLabel();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pRAM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).BeginInit();
             this.panel1.SuspendLayout();
@@ -102,6 +108,7 @@ namespace System_Resource_Monitor
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.CircleProgressBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pRAM
@@ -231,14 +238,19 @@ namespace System_Resource_Monitor
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(52)))));
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.metroLabelPLugged);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel12);
-            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.CircleProgressBar);
+            this.panel2.Controls.Add(this.panel14);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 30);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(150, 510);
             this.panel2.TabIndex = 10;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -398,21 +410,21 @@ namespace System_Resource_Monitor
             // 
             this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(85)))));
             this.chart1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(85)))));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(85)))));
+            chartArea41.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea41);
+            legend41.Name = "Legend1";
+            this.chart1.Legends.Add(legend41);
             this.chart1.Location = new System.Drawing.Point(0, 40);
             this.chart1.Name = "chart1";
-            series2.BorderWidth = 2;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Color = System.Drawing.SystemColors.ButtonHighlight;
-            series2.IsVisibleInLegend = false;
-            series2.Legend = "Legend1";
-            series2.Name = "CPU";
-            this.chart1.Series.Add(series2);
+            series41.BorderWidth = 2;
+            series41.ChartArea = "ChartArea1";
+            series41.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series41.Color = System.Drawing.SystemColors.ButtonHighlight;
+            series41.IsVisibleInLegend = false;
+            series41.Legend = "Legend1";
+            series41.Name = "CPU";
+            this.chart1.Series.Add(series41);
             this.chart1.Size = new System.Drawing.Size(325, 240);
             this.chart1.TabIndex = 5;
             // 
@@ -432,22 +444,22 @@ namespace System_Resource_Monitor
             this.chart2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
             this.chart2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.chart2.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
+            chartArea42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
+            chartArea42.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea42);
+            legend42.Name = "Legend1";
+            this.chart2.Legends.Add(legend42);
             this.chart2.Location = new System.Drawing.Point(0, 40);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
-            series1.BorderWidth = 2;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Color = System.Drawing.SystemColors.ButtonHighlight;
-            series1.IsVisibleInLegend = false;
-            series1.Legend = "Legend1";
-            series1.Name = "Memory";
-            this.chart2.Series.Add(series1);
+            series42.BorderWidth = 2;
+            series42.ChartArea = "ChartArea1";
+            series42.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series42.Color = System.Drawing.SystemColors.ButtonHighlight;
+            series42.IsVisibleInLegend = false;
+            series42.Legend = "Legend1";
+            series42.Name = "Memory";
+            this.chart2.Series.Add(series42);
             this.chart2.Size = new System.Drawing.Size(325, 240);
             this.chart2.TabIndex = 6;
             // 
@@ -617,6 +629,80 @@ namespace System_Resource_Monitor
             this.timer2.Interval = 450;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // CircleProgressBar
+            // 
+            this.CircleProgressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
+            this.CircleProgressBar.Controls.Add(this.metroLabelBattery);
+            this.CircleProgressBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.CircleProgressBar.FillThickness = 7;
+            this.CircleProgressBar.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CircleProgressBar.ForeColor = System.Drawing.Color.White;
+            this.CircleProgressBar.Location = new System.Drawing.Point(30, 255);
+            this.CircleProgressBar.Minimum = 0;
+            this.CircleProgressBar.Name = "CircleProgressBar";
+            this.CircleProgressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.CircleProgressBar.ProgressColor2 = System.Drawing.Color.Aquamarine;
+            this.CircleProgressBar.ProgressThickness = 7;
+            this.CircleProgressBar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.CircleProgressBar.Size = new System.Drawing.Size(87, 87);
+            this.CircleProgressBar.TabIndex = 19;
+            this.CircleProgressBar.Text = "guna2CircleProgressBar1";
+            // 
+            // metroLabelBattery
+            // 
+            this.metroLabelBattery.AutoSize = true;
+            this.metroLabelBattery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
+            this.metroLabelBattery.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabelBattery.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabelBattery.ForeColor = System.Drawing.Color.White;
+            this.metroLabelBattery.Location = new System.Drawing.Point(28, 36);
+            this.metroLabelBattery.Name = "metroLabelBattery";
+            this.metroLabelBattery.Size = new System.Drawing.Size(33, 17);
+            this.metroLabelBattery.TabIndex = 8;
+            this.metroLabelBattery.Text = "00%";
+            this.metroLabelBattery.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabelBattery.UseCustomBackColor = true;
+            this.metroLabelBattery.UseCustomForeColor = true;
+            // 
+            // metroLabelPLugged
+            // 
+            this.metroLabelPLugged.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
+            this.metroLabelPLugged.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabelPLugged.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabelPLugged.ForeColor = System.Drawing.Color.White;
+            this.metroLabelPLugged.Location = new System.Drawing.Point(3, 348);
+            this.metroLabelPLugged.Name = "metroLabelPLugged";
+            this.metroLabelPLugged.Size = new System.Drawing.Size(150, 17);
+            this.metroLabelPLugged.TabIndex = 9;
+            this.metroLabelPLugged.Text = "#";
+            this.metroLabelPLugged.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabelPLugged.UseCustomBackColor = true;
+            this.metroLabelPLugged.UseCustomForeColor = true;
+            // 
+            // timer3
+            // 
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(0, 222);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(150, 16);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Battery Status";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(101)))), ((int)(((byte)(114)))));
+            this.panel14.Location = new System.Drawing.Point(0, 204);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(150, 180);
+            this.panel14.TabIndex = 21;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -665,6 +751,8 @@ namespace System_Resource_Monitor
             this.panel10.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            this.CircleProgressBar.ResumeLayout(false);
+            this.CircleProgressBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -718,6 +806,12 @@ namespace System_Resource_Monitor
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar CircleProgressBar;
+        private MetroFramework.Controls.MetroLabel metroLabelBattery;
+        private MetroFramework.Controls.MetroLabel metroLabelPLugged;
+        private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel14;
     }
 }
 

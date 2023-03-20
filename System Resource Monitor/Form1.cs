@@ -19,6 +19,9 @@ namespace System_Resource_Monitor
     public partial class Form1 : MetroFramework.Forms.MetroForm
     {
 
+        private PowerStatus p = SystemInformation.PowerStatus;
+        private BatteryChargeStatus b;
+
         PerformanceCounter perfCPU = new PerformanceCounter("Processor","% Processor Time","_Total");
         PerformanceCounter perfRAM = new PerformanceCounter("Memory","Available MBytes");
         PerformanceCounter perfSYS = new PerformanceCounter("System","System Up Time");
@@ -94,6 +97,7 @@ namespace System_Resource_Monitor
         {
             timer.Start();
             timer1.Start();
+            timer3.Start();
             metroLabelTime.Text = DateTime.Now.ToShortTimeString();
             metroLabelDate.Text = DateTime.Now.ToShortDateString();
 
@@ -142,6 +146,39 @@ namespace System_Resource_Monitor
         }
 
         private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            b = p.BatteryChargeStatus;
+            TimeSpan time = TimeSpan.FromSeconds(p.BatteryLifeRemaining);
+            CircleProgressBar.Value = (int)(p.BatteryLifePercent * 100);
+            metroLabelBattery.Text = (p.BatteryLifePercent * 100).ToString() + "%";
+            if (b == BatteryChargeStatus.Low && (b & BatteryChargeStatus.Charging) != BatteryChargeStatus.Charging)
+            {
+                CircleProgressBar.ProgressColor = Color.FromArgb(240, 89, 69);
+            }
+            else
+            {
+                CircleProgressBar.ProgressColor = Color.FromArgb(33, 230, 197);
+            }
+            if ((b&BatteryChargeStatus.Charging) == BatteryChargeStatus.Charging)
+            {
+                metroLabelPLugged.Text = "Plugged in";
+            }
+            else if((b & BatteryChargeStatus.High) == BatteryChargeStatus.High)
+            {
+                metroLabelPLugged.Text = "Battery full";
+            }
+            else 
+            {
+                metroLabelPLugged.Text = "On Battery";
+            }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
