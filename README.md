@@ -4,7 +4,7 @@
 
 ## Description
 
-The System Resource Monitor is an application developed using Visual Studio and .NET Framework by a group of Computer Science undergraduate students, at Eastern University. This application provides a user-friendly graphical interface that displays the current usage of system resources, including CPU and memory usage, network connectivity, available memory, system uptime, count of logical and physical cores, and date and time.
+The System Resource Monitor is an application developed using Visual Studio and .NET Framework by a group of Computer Science undergraduate students, at Eastern University. This application provides a user-friendly graphical interface that displays the current usage of system resources, including CPU and memory usage, network connectivity, Battery status, available memory, system uptime, count of logical and physical cores, and date and time.
 
 ## Getting Started
 
