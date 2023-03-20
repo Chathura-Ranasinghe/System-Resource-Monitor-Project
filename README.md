@@ -39,4 +39,4 @@ If you need assistance with the System Resource Monitor application, please cont
 
 ## License
 
-This project is licensed under the GNU Affero General Public License v3.0. For more information, please refer to the "LICENSE.md" file.
+This project is licensed under the GNU Affero General Public License v3.0. For more information, please refer to the "LICENSE.txt" file.
